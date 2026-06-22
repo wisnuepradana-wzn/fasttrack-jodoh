@@ -34,7 +34,7 @@ export default async function LoginPage({
               </div>
             )}
 
-            <GoogleButton redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/dashboard`} />
+            <GoogleButton redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/auth/callback?next=/dashboard`} />
 
             <div className="flex items-center gap-3">
               <div className="h-px flex-1 bg-slate-200" />
