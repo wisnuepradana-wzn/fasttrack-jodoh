@@ -3,17 +3,19 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #141414;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  /* background is controlled by tailwind classes on body in layout.tsx */
+  background-color: #141414;
+  color: #ffffff;
 }
 
 * {
@@ -25,13 +27,14 @@ a {
   text-decoration: none;
 }
 
-/* Base element styles to ensure unisex and modern feeling */
 ::selection {
-  background-color: #e0e7ff; /* navy-100 / indigo-100 */
-  color: #312e81; /* navy-900 / indigo-900 */
+  background-color: #E50914;
+  color: #ffffff;
 }
 
-/* Form inputs focus transition */
 input, select, textarea {
   transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-color: #333333;
 }
