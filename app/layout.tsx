@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { APP_NAME } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", weight: ["400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   title: APP_NAME,
@@ -17,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${inter.variable} font-sans`}>
-      <body className="antialiased bg-slate-50 text-slate-900">{children}</body>
+    <html lang="id" className={`${inter.variable} ${montserrat.variable} font-sans`}>
+      <body className="antialiased bg-[#141414] text-white selection:bg-[#E50914] selection:text-white">{children}</body>
     </html>
   );
 }
