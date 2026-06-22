@@ -27,7 +27,7 @@ export default async function RegisterPage({
               </div>
             ) : null}
 
-            <GoogleButton redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/pending-access`} />
+            <GoogleButton redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/auth/callback?next=/pending-access`} />
 
             <div className="flex items-center gap-3">
               <div className="h-px flex-1 bg-slate-200" />
