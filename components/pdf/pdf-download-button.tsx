@@ -5,7 +5,7 @@ import { FileText, Loader2 } from "lucide-react";
 import type { ReactElement } from "react";
 
 type PDFDownloadButtonProps = {
-  document: ReactElement;
+  document: any;
   fileName: string;
   label?: string;
 };
