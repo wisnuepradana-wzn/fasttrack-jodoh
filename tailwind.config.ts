@@ -11,32 +11,48 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["var(--font-montserrat)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
-        navy: {
-          50: "#eef2ff",
-          100: "#e0e7ff",
-          200: "#c7d2fe",
-          300: "#a5b4fc",
-          400: "#818cf8",
-          500: "#6366f1", // Modern Indigo
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
-          900: "#312e81",
-          950: "#1e1b4b"
+        navy: { 
+          50: '#fcf3f3',
+          100: '#f9e6e6',
+          200: '#f1caca',
+          300: '#e8a1a1',
+          400: '#dd6d6d',
+          500: '#E50914', 
+          600: '#c50009',
+          700: '#a50006',
+          800: '#870509',
+          900: '#70090c',
+          950: '#3d0003',
+        },
+        slate: { 
+          50: '#1c1c1c',   
+          100: '#232323',  
+          200: '#333333',  
+          300: '#404040',
+          400: '#666666',
+          500: '#808080',
+          600: '#b3b3b3',  
+          700: '#cccccc',
+          800: '#e5e5e5',  
+          900: '#ffffff',  
+          950: '#ffffff',
         }
       },
+      backgroundColor: {
+        white: '#141414',
+      },
       boxShadow: {
-        soft: "0 10px 40px -10px rgba(0,0,0,0.08)",
-        lift: "0 20px 40px -10px rgba(0,0,0,0.12)"
+        soft: "0 10px 40px -10px rgba(0,0,0,0.5)",
+        lift: "0 20px 40px -10px rgba(0,0,0,0.7)"
       },
       borderRadius: {
         "2xl": "1.5rem"
       },
       backgroundImage: {
-        "premium-gradient":
-          "radial-gradient(circle at top, rgba(99,102,241,0.15), transparent 40%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0))"
+        "premium-gradient": "linear-gradient(180deg, rgba(20,20,20,0) 0%, #141414 100%)"
       }
     }
   },
