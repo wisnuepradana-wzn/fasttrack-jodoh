@@ -65,10 +65,16 @@ export default async function ComparePage({
 
       if (!answers) return null;
 
-      const engineInput: AnswerRecord[] = answers.map((a) => ({
-        pillar: (a.assessment_questions as { pillar: string }).pillar as AnswerRecord["pillar"],
-        answer_value: a.answer_value
-      }));
+            const engineInput: AnswerRecord[] = answers.map((a) => {
+        const pillarVal = Array.isArray(a.assessment_questions)
+          ? a.assessment_questions[0]?.pillar
+          : (a.assessment_questions as any)?.pillar;
+          
+        return {
+          pillar: pillarVal as AnswerRecord["pillar"],
+          answer_value: a.answer_value
+        };
+      });
 
       return runCandidateAssessmentEngine(candidate.id, engineInput);
     })
